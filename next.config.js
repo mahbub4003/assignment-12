@@ -1,14 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: "build",
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "roar.media",
-      },
-    ],
-  },
   async headers() {
     return [
       {
@@ -16,6 +8,14 @@ const nextConfig = {
         headers: [{ key: "X-Frame-Options", value: "DENY" }],
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "roar.media",
+      },
+    ],
   },
 };
 
