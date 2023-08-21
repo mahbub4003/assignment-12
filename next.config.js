@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "build",
+  // distDir: "build",
   // images: {
   //   remotePatterns: [
   //     {
@@ -9,14 +9,14 @@ const nextConfig = {
   //     },
   //   ],
   // },
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [{ key: "X-Frame-Options", value: "DENY" }],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/:path*",
+  //       headers: [{ key: "X-Frame-Options", value: "DENY" }],
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;
