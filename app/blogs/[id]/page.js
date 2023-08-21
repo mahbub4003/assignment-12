@@ -1,9 +1,9 @@
+import { getBlogsWithCatagory } from "@/app/libs/getBlogs";
 import Image from "next/image";
-import { getItems } from "./libs/getItems";
 import Link from "next/link";
 
-export default async function Home() {
-  const blogs = await getItems();
+export default async function Home({ params }) {
+  const blogs = await getBlogsWithCatagory(params.id);
 
   return (
     <div>
@@ -22,20 +22,21 @@ export default async function Home() {
       </section>
       <section className="bg-slate-200 my-3 p-2 rounded">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {blogs.map((item) => {
+          {blogs.reverse().map((blog) => {
             return (
               <div
                 className=" bg-white m-1 p-2 rounded hover:bg-gray-100 duration-300"
-                key={item.id}
+                key={blog.id}
               >
-                <Link href={`/blogs/${item.id}`}>
-                  <p className="text-3xl font-bold ">
-                    <span>
-                      {item.id} -{">"}
-                    </span>
-                    {item.name}
-                  </p>
-                  <p>{item.short}</p>
+                <Link href={`/blogs/blog/${blog.id}?name=${params.id}`}>
+                  <Image
+                    className="fill"
+                    src={blog.img}
+                    width={800}
+                    height={300}
+                  />
+                  <p className="text-2xl font-bold">{blog.title}</p>
+                  <p>{blog.short}</p>
                 </Link>
               </div>
             );
