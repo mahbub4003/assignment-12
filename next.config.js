@@ -5,7 +5,10 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        headers: [{ key: "X-Frame-Options", value: "DENY" }],
+        headers: [
+          { key: "Ostad", value: "Next1" },
+          { key: "X-Frame-Options", value: "DENY" },
+        ],
       },
     ];
   },
@@ -14,6 +17,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "roar.media",
+        pathname: "/api/**",
       },
     ],
   },
