@@ -46,7 +46,7 @@ export default async function Home() {
         <h1 className="text-2xl text-green-800 font-bold text-center my-4">
           Our client's review
         </h1>
-        <div className="flex">
+        <div className="grid grid-cols-1 sm:grid-cols-2">
           <div>
             <h2 className="text-blue-600 font-bold">Mr. Jon -{">"}</h2>
             <p className="text-justify leading-6 px-4">

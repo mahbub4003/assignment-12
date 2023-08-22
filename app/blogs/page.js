@@ -9,16 +9,8 @@ export default async function Home() {
     <div>
       <section className="bg-slate-200 my-2 p-2 rounded">
         <h1 className="text-2xl text-green-800 font-bold text-center my-4">
-          Well come My Blog website
+          My Blog here -{">"}
         </h1>
-        <p className="text-justify leading-6">
-          Ullamco est deserunt exercitation nostrud voluptate sint aute in
-          laboris sunt elit ipsum. Non tempor minim nulla nostrud do incididunt
-          duis Lorem nulla sint ex sit ex laborum. Nostrud id eu Lorem proident
-          nostrud ut nulla ad adipisicing. Ea non non exercitation ipsum enim
-          adipisicing. Cillum labore amet labore sit laborum incididunt in
-          veniam aute. Magna dolor qui qui do velit amet sint eiusmod.
-        </p>
       </section>
       <section className="bg-slate-200 my-3 p-2 rounded">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
