@@ -17,7 +17,8 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "roar.media",
-        pathname: "/api/**",
+        port: "",
+        pathname: "/wp-content/**",
       },
     ],
   },

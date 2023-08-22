@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const Page = async ({ params }) => {
   const blog = await getSingleBlog(params.id);
+  console.log(blog);
 
   return (
     <>
